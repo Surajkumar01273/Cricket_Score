@@ -40,7 +40,7 @@ function CricketScore() {
           </button>
         </div>
 
-        <div className='w-screen h-full grid grid-cols-3 gap-4 mt-5 px-6'>
+        <div className='w-screen h-full grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-4 mt-5 px-6'>
           {result.length > 0 ? (
             result.map((match, index) => {
               return (
@@ -58,7 +58,7 @@ function CricketScore() {
                         alt=''
                       />
                       <h2 className='text-lg mt-2'>{match.t1}</h2>
-                      <h4 className='opacity-70 text-sm font-medium'>350/9</h4>
+                      <h4 className='opacity-70 text-sm font-medium'>{match.t1s}</h4>
                     </div>
 
                     <div>
@@ -68,7 +68,7 @@ function CricketScore() {
                         alt=''
                       />
                       <h2 className='text-lg mt-2'>{match.t2}</h2>
-                      <h4 className='opacity-70 text-sm font-medium'>300/5</h4>
+                      <h4 className='opacity-70 text-sm font-medium'>{match.t2s}</h4>
                     </div>
                   </div>
                   <p className='text-black my-4'>Status : <span className='text-green-600'>{match.status}</span></p>
@@ -76,7 +76,7 @@ function CricketScore() {
               );
             })
           ) : (
-            <h2 className='text-center text-2xl ml-[300px]'>No Result Found</h2>
+            <h2 className='text-center text-2xl ml-[400px]'>No Result Found</h2>
           )}
         </div>
       </div>
