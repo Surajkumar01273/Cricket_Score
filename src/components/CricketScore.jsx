@@ -29,7 +29,7 @@ function CricketScore() {
     <>
     {/* bg-gradient-to-b from-blue-500 to-indigo-600 */}
       <div className=' max-w-screen-2xl min-h-screen bg-gray-600'>
-        <div className='flex items-center justify-center pt-5 gap-4'>
+        <div className='flex items-center justify-center pt-5 px-2 space-x-2 md:gap-4'>
           <input
             type='text'
             placeholder='Search team...'
@@ -40,13 +40,13 @@ function CricketScore() {
           </button>
         </div>
 
-        <div className='w-screen h-full grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-4 mt-5 px-6'>
+        <div className='w-screen h-full grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-4 mt-5 md:px-6'>
           {result.length > 0 ? (
             result.map((match, index) => {
               return (
                 <div
                   key={index}
-                  className='card bg-zinc-300 shadow-md rounded-md px-6'
+                  className='card bg-zinc-300 shadow-md md:rounded-md px-6'
                 >
                   <h2 className='text-lg font-medium'>{match.series}</h2>
                   <h4 className='opacity-70 text-sm my-2'>{match.matchType.toUpperCase()}</h4>
